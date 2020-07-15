@@ -1,0 +1,392 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-image: url("./images/bg2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+:root {
+    --greenColor: #47b92b;
+}
+
+.VisuallyHidden {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1000px;
+}
+
+.ContentWrapper {
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.Header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    margin-bottom: 60px;
+}
+
+.Header__ContentWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo {
+    display: block;
+    width: 100px;
+}
+
+.Navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.Navigation__list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Navigation__item {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.Navigation__button {
+    display: block;
+    padding: 10px 15px;
+    border: 0;
+
+    color: var(--greenColor);
+    border: 2px solid var(--greenColor);
+    background-color: transparent;
+    border-radius: 5px;
+
+    transition: background-color 0.3s;
+
+}
+
+.Navigation__button--active {
+    color: #ffffff;
+    background-color: var(--greenColor);
+}
+
+.Navigation__button:hover {
+    color: #ffffff;
+    background-color: var(--greenColor);
+}
+
+.Main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tracker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5%;
+}
+
+.Tracker__form {
+    margin-bottom: 30px;
+}
+
+/* .Tracker__ExercisesList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.Tracker__select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 0;
+
+    border-radius: 5px;
+}
+
+.Tracker__option {
+    padding: 15px;
+}
+
+.Tracker__title {
+    padding: 0;
+    margin: 0 0 25px 0;
+
+    border-bottom: 1px solid #ffffff;
+
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.Tracker__input {
+    width: 100%;
+    padding: 10px;
+}
+
+.Tracker__input--exercise {
+    display: none;
+}
+
+.Tracker__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Tracker__input--reps {
+    border: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.Tracker__add {
+    align-self: stretch;
+    padding: 0 25px;
+    border: 0;
+
+    color: #ffffff;
+
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+
+    border-radius: 0 5px 5px 0;
+}
+
+.Tracker__add:hover {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.Tracker__sets {
+    display: flex;
+    flex-grow: 1;
+    align-items: start;
+}
+
+.Tracker__reps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    cursor: pointer;
+}
+
+.Tracker__label {    
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.Tracker__amount {
+    position: relative;
+    margin-bottom: 5px;
+    padding-right: 5px;
+
+    color: #ffffff;
+
+}
+
+.Tracker__number {
+    margin: 0;
+    padding: 0;
+}
+
+.Error {
+    margin-top: 10px;
+
+    font-size: 12px;
+    color: rgb(243, 43, 43);
+
+    transition: opacity 0.3s;
+}
+
+.Tracker__total {
+    padding-top:3px;
+    border-top: 1px solid #ffffff;
+
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.Tracker__amount--total {
+    color: #47b92b
+}
+
+.Tracker__add--complete {
+    margin-top: 15px;
+}
+
+.DeleteButton {
+    position: relative;
+
+    width: 15px;
+    height: 15px;
+    border: 0;
+
+    background-color: transparent;
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.DeleteButton--Tracker--opacity {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.DeleteButton::after,
+.DeleteButton::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 12px;
+    height: 2px;
+
+    background: red;
+}
+
+.DeleteButton::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.DeleteButton::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.Tracker__amount:hover .DeleteButton--Tracker--opacity,
+.Tracker__label:hover .DeleteButton--Tracker--opacity {
+    opacity: 1;
+}
+
+.DeleteButton--Tracker__amount {
+    position: absolute;
+    margin-left: 5px;
+}
+
+.History {
+    display: none;
+    align-items: center;
+    padding: 20px;
+
+    color: #ffffff;
+
+    background-color: rgba(96, 145, 236, 0.5);
+    border-radius: 5px;
+}
+
+.History__item {
+    padding: 5px;
+    background-color: rgba(12, 3, 97, 0.5);
+}
+
+.History__date {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.History__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.History__label {
+    width: 85px;
+    padding: 0 5px;
+}
+
+.History__numbers {
+    display: flex;
+}
+
+.History__number {
+    position: relative;
+    margin-right: 16px;
+}
+
+.History__number::after {
+    content: "";
+
+    position: absolute;
+    left: 150%;
+    top: 50%;
+
+    width: 4px;
+    height: 4px;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.History__number:last-child::after {
+    display: none;
+}
+
+.History__total {
+    padding-left: 5px;
+    border-left: 2px solid rgb(252, 250, 250);
+}
+
+.Success {
+    padding: 5px 0;
+    margin: 5px 0;
+
+    font-size: 12px;
+    color: rgb(241, 219, 18);
+    text-align: center;
+
+    border-radius: 5px;
+
+
+    transition: opacity 0.3s;
+}
+
+.Message--hidden {
+    opacity: 0;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Workout App, push-up, pull-up, squats</title>
+</head>
+<body>
+    <header class="Header">
+        <div class="ContentWrapper Header__ContentWrapper">
+            <a href="#" class="Logo">
+                <img class="Logo__image" src="./images/logo.png" width="200" height="115" alt="App for home workouts">
+            </a>
+            <nav class="Navigation">
+                <ul class="Navigation__list">
+                    <li class="Navigation__item">
+                        <button class="Navigation__button Navigation__button--active">Start</button>
+                    </li>
+                    <li class="Navigation__item">
+                        <button class="Navigation__button" type="button">History</button>
+                    </li>
+                    <li class="Navigation__item">
+                        <button class="Navigation__button" type="button">Information</button>
+                    </li>
+                </ul>
+            </nav>
+        </div> 
+    </header>
+    <main class="Main">
+        <section class="Tracker" data-section="start">
+            <form class="Tracker__form">
+                <p class="Tracker__title">Select Exercise</p>
+                <select class="Tracker__select" name="exercises" id="exercises">
+                    <option class="Tracker__option" value="push-ups">Push-ups</option>
+                    <option value="pull-ups">Pull-ups</option>
+                    <option value="squats">Squats</option>
+                </select>
+                <p class="Tracker__title">Enter Reps</p>
+                <div class="Tracker__controls">
+                    <input class="Tracker__input Tracker__input--reps" type="number" name="reps" id="reps" placeholder="reps" min="1" required>
+                    <button class="Tracker__add" type="submit">Add</button>
+                </div>
+                <div class="Error .Error--Tracker Message--hidden">It should be a number and more than 0</div>
+            </form>
+            <div class="Tracker__results">
+                <ul class="Tracker__sets"></ul> 
+                <ul class="Tracker__sets Tracker__sets--total"></ul>
+            </div>
+            <p class="Success Message--hidden">Your workout was saved!</p>
+            <button class="Navigation__button Tracker__add--complete">Completed</button>
+        </section>
+
+        <section class="History" data-section="history">
+            <ul class="History__list"></ul>
+        </section>
+    </main>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/filter.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-image:url(assets/images/bg.jpg);
+  position: relative;
+  /* background-size: cover; */
+  margin: 0;
+  padding: 0;
+}
+.canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+ 
+}
+canvas {
+  border-radius: 15px;
+  height: 80vh;
+  width: 100vh;
+
+-webkit-box-shadow: 3px 5px 62px -10px rgba(143,0,122,1);
+-moz-box-shadow: 3px 5px 62px -10px rgba(143,0,122,1);
+box-shadow: 3px 5px 62px -10px rgba(143,0,122,1);
+}
+
+.info {
+  width: 20%;
+  height: 60vh;
+  background-color: SandyBrown;
+  text-align: center;
+}
+
+.title {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: DarkMagenta;
+}
+
+.count {
+  font-family: 'Modak', cursive;
+  font-size: 100px;
+}
+
+.hit {
+  color: Olive;
+}
+
+.fail {
+  color: Maroon;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  opacity: 0;
+  border: 1px solid red;
+}
+
+
+a {
+  display: block;
+  padding: 35px;
+  background: rgb(226, 215, 55);
+  border-radius: 50%;
+}
+
+#fire {
+  background-color: rgb(221, 43, 43);
+}
+
+.user {
+  display: none;
+  position: absolute;
+  padding-top: 20px;
+  width: 50%;
+  background-color: rgb(26, 3, 78);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 15px;
+}
+
+.score-table {
+  margin: 0 auto;
+  min-width: 80%;
+  height: 350px;
+  font-size: 12;
+  color: rgb(255, 255, 255);
+  text-align: left;
+
+  overflow: scroll;
+}
+
+.score-table tr {
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 1115px) {
+  canvas {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .canvas-wrapper {
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 5vh;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+  .count {
+    font-size: 16px;
+  }
+  .last {
+    order: -1;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  canvas {
+    width: 100%;
+    height: 70vh;
+  }
+
+.btns {
+  opacity: 1;
+  height: 20vh;
+}
+
+
+
+#left,
+#right,
+#fire {
+  align-self: center;
+  text-align: center;
+}
+
+.last {
+  order: -1;
+}
+
+
+}
+
+.userName {
+  padding: 10px;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+
+
+.rules {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  color: #c0ce06;
+
+  background-image: url("./assets/images/asteroids-bg.jpg");
+  background-size: cover;
+
+}
+
+
+.rules__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.rules__item {
+  position: relative;
+
+  padding: 5px 5px 5px 45px;
+  margin-bottom: 10px;
+
+  font-family: Arial, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+
+  background-color: blueviolet;
+  border-radius: 5px;
+}
+
+.rules__item::before {
+  content: "";
+
+  position: absolute;
+  top: 10px;
+  left: 12px;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background-image: url("./assets/images/arrow.svg");
+  background-size: contain;
+}
+
+.rules__item-up.rules__item::before {
+  transform: rotate(-90deg);
+}
+
+.rules__item-left.rules__item::before {
+  transform: rotate(180deg);
+}
+
+.rules__item-bottom.rules__item::before {
+  transform: rotate(90deg);
+}
+
+.rules__item-fire {
+  color: rgb(233, 61, 61);
+
+  background-color: rgb(186, 226, 43);
+  border-radius: 5px;
+}  
+
+.rules__item-fire.rules__item::before {
+  background-image: url("./assets/images/space.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.button-start {
+	background:linear-gradient(to bottom, #e1f008 5%, #bd2a2a 100%);
+	background-color:#e1f008;
+	border-radius:28px;
+	border:1px solid #ab1919;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	padding:22px 76px;
+	text-decoration:none;
+	text-shadow:-2px 1px 12px #1c1c1c;
+}
+.button-start:hover {
+	background:linear-gradient(to bottom, #bd2a2a 5%, #e1f008 100%);
+	background-color:#bd2a2a;
+}
+.button-start:active {
+	position:relative;
+	top:1px;
+}

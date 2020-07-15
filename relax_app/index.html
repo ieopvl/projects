@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relax</title>
+</head>
+    <body>
+        <div class="app">
+
+            <div class="settings" >
+                <h2 class="settings__title">Settings</h2>
+                <div class="settings__controls">
+                    <ul class="settings__list">
+                        <li class="settings__item">
+                            <label for="breath-in">Breath-in</label>
+                            <input class="settings__input settings__input_time" type="text" id="breath-in" value="3" data-action="breath">
+                        </li>
+                        <li class="settings__item">
+                            <label for="hold-in">Hold</label>
+                            <input class="settings__input settings__input_time" type="text" id="hold-in" value="0" data-action="hold">
+                        </li>
+                        <li class="settings__item">
+                            <label for="breath-out">Breath-out</label>
+                            <input class="settings__input settings__input_time" type="text" id="breath-out" value="3" data-action="breath-out">
+                        </li>
+                        <li class="settings__item">
+                            <label for="hold-out">Hold</label>
+                            <input class="settings__input settings__input_time" type="text" id="hold-out" value="0" data-action="hold">
+                        </li>
+                        <li class="settings__item">
+                            <label for="times">Times</label>
+                            <input class="settings__input settings__input_times" type="text" id="times" value="1">
+                        </li>
+                    </ul>
+                    <button class="button-start_app">start</button>
+                </div>
+            </div>
+
+            <div class="visualization">
+                <div class="wrapper">
+                    <svg height="400" width="400" stroke="black" stroke-width="15">
+                        <circle
+                                r="100"
+                                cx="200"
+                                cy="200"
+                                fill="transparent"
+                                stroke="blue"
+                                stroke-width="45"
+                                transform="rotate(-90, 200, 200)"
+                        />
+                    </svg>
+                </div>
+                <span type="text" id="duration" class="visualization__duration"></span>
+                <button class="button-control button-control_continue">continue</button>
+                <button class="button-control button-control_pause">pause</button>
+            </div hidden >
+        </div>
+
+        <script src="dist/main.js"></script>
+    </body>
+</html>
