@@ -22,9 +22,9 @@ Some most interesting form it:
     
 2) My first app [Shooter game](https://ieopvl.github.io/projects/shooter_game/)
 3) [Fitness Tracker App](https://ieopvl.github.io/projects/workout_app/). I use local storage to save daily results
-4) [Relax App](https://ieopvl.github.io/projects/relax_app/). Here I use OOP principles and Webpack 4.
+4) [Relax App](https://ieopvl.github.io/projects/relax_app/). Here I use OOP programming style and Webpack 4.
 
 **React**
 
-1) [Youtube-api](https://ieopvl.github.io/projects/youtube-api/). 
+1) [youtube-searcher-app](https://ieopvl.github.io/test-gh/). 
 To build project I used React, axios, Bootstrap, Octicons
