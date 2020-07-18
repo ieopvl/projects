@@ -26,5 +26,5 @@ Some most interesting form it:
 
 **React**
 
-1) [youtube-searcher-app](https://ieopvl.github.io/test-gh/). 
+1) [youtube-searcher-app](https://ieopvl.github.io/youtube-api/). 
 To build project I used React, axios, Bootstrap, Octicons
