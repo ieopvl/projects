@@ -8,7 +8,7 @@
     * [Funny Personal Page](https://codepen.io/ieopvl/full/gOaGgbV)
     
 
-2) Responsive [Singolo](https://github.com/ieopvl/projects/tree/gh-pages) site
+2) Responsive [Singolo](https://ieopvl.github.io/projects/singolo_web_page/) site
 
 **JavaScript**
 
