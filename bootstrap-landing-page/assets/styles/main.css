@@ -1,0 +1,192 @@
+.color-white {
+    color: #ffffff;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.color-blue {
+    color: #3496f9
+}
+
+.navbar {
+    padding: 1em 2em;
+
+    background-color: #3496f9;
+}
+
+.navbar svg {
+    fill: #fff;
+}
+
+.nav-link, .navbar-brand {
+    font-size: 1.4rem;
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    background-color: #fff;
+    color: #3496f9;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.header {
+    height: 100vh;
+
+    background-image: url('../images/header-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    background-color: transparent;
+}
+
+.description {
+    position: absolute;
+    left: 0;
+    top: 30%;
+
+    width: 60%;
+    padding: 2em;
+}
+
+.description button {
+    border:1px  solid #fff;
+
+    background: transparent;
+    color:#fff;
+}
+
+.active-button-custom {
+    border:1px solid #fff;
+
+    background-color: #ffffff;
+    color:#3496f9;
+}
+
+.description button:hover {
+    border: 1px solid #fff;
+
+    background: #ffffff;
+    color:#3496f9;
+}
+
+.about {
+    padding: 2em;
+
+    background-image: url("../images/about-2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 10%;
+}
+
+
+
+.about p {
+    max-width: 60%;
+}
+
+
+
+.portfolio {
+    position: relative;
+
+    margin: 4em 0;
+}
+
+.portfolio img {
+    width: 100%;
+    height: auto;
+    margin: 1em;
+}
+
+
+.blog {
+    position: relative;
+
+    margin: 4em 0;
+}
+
+blog h2 {
+    margin: 2em;
+}
+
+.team {
+    position: relative;
+
+    margin: 4em 0;
+    padding: 4em 0;
+    background-color: rgba(52, 150, 249, 0.3);
+
+    text-align: center;
+}
+
+.team .item {
+    position: relative;
+}
+
+.team .des {
+    font-size: 2.4rem;
+}
+
+.contact-form {
+    position: relative;
+
+    margin: 6em 0;
+}
+
+.contact-form h2 {
+    padding: 2em 1px;
+}
+
+.contact-form .right-section {
+    max-width: 600px;
+}
+
+
+@media (max-width: 991.98px) {
+    .about {
+        background-image: none;
+    }
+
+    .about p {
+        max-width: 100%;
+    }
+
+    .lead {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+        text-align: center;
+
+    }
+    .description h2 {
+        font-size: 4rem;
+    }
+}
+
+
+
