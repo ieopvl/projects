@@ -30,3 +30,6 @@ Some most interesting form it:
 
 1) [youtube-searcher-app](https://ieopvl.github.io/youtube-api/). 
 To build project I used React, axios, Bootstrap, Octicons
+
+2) [Notes](https://ieopvl.github.io/notes-app/) is app with CRUD functionality.
+Built on React, Bootstrap 4, Octicons
